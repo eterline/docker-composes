@@ -1,0 +1,15 @@
+version: "2.2"
+
+services:
+  file-browser:
+    image: filebrowser/filebrowser:s6
+    container_name: file-browser-app
+    hostname: file-browser
+    volumes:
+     - ~/file-storage:/srv
+     - ~/file-browser-configs:/database
+     - ~/file-browser-configs:/config
+    environment:
+     - PUID=$(id -u)
+     - PUID=$(id -g)
+    restart: unless-stopped

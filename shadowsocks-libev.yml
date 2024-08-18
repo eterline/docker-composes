@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  shadowsocks:
+    image: shadowsocks/shadowsocks-libev
+    container_name: socks-proxy
+    ports:
+      - "8080:8388"
+    environment:
+      - METHOD=chacha20-ietf-poly1305
+      - PASSWORD=examplepassword
+    restart: unless-stopped

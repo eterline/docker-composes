@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  nextcloud-app:
+    image: nextcloud
+    container_name: nextcloud-service
+    hostname: nextcloud-service
+    restart: always
+    ports:
+      - '80:80'
+    volumes:
+      - /root/nextcloud:/var/www

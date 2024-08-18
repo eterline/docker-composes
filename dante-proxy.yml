@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  dante-app:
+    image: schors/tgdante2
+    container_name: dante-proxy-app
+    restart: always
+    ports:
+      - '8080:8080'
+    environment:
+      - PORT=8080
+      - USER=proxy-user
+      - PASS=exmaplepassword

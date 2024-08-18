@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  owncloud:
+    image: owncloud
+    container_name: owncloud-service
+    hostname: owncloud-service
+    restart: always
+    volumes:
+      - ./owncloud-data:/var/www/html
+    depends_on:
+      - owncloud-db
+
+  mysql:
+    image: mariadb
+    container_name: owncloud-db
+    hostname: owncloud-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: examplepassword
