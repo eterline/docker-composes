@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  speed-test:
+    image: openspeedtest/latest
+    ports:
+      - '9080:3000'
+      - '9443:3001'
+    environment:
+       - USER_EMAIL=email@example.com
+    restart: unless-stopped
+    container_name: openspeedtest

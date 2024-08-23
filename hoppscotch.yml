@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  hoppscotch:
+    image: 'hoppscotch/hoppscotch:latest'
+    container_name: hoppscotch
+    hostname: hoppscotch
+    restart: unless-stopped
+    ports:
+      - '3200:3000'
+      - '3100:3100'
+      - '3170:3170'
+    env_file: "hoppscotch.env"
