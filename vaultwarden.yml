@@ -7,7 +7,7 @@ services:
     hostname: vaultwarden
     restart: unless-stopped
     volumes:
-    - ./vaultwarden-data/:/data/
+      - ./vaultwarden-data/:/data/
     environment:
-    - ADMIN_TOKEN=examplepassword(use bcrypt generator)
-    - SIGNUPS_ALLOWED=false
+      - ADMIN_TOKEN=examplepassword(use bcrypt generator)
+      - SIGNUPS_ALLOWED=false

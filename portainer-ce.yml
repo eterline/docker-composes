@@ -6,7 +6,7 @@ services:
     container_name: docker-portainer
     hostname: docker-portainer
     ports:
-	    - "9443:9443"
+      - "9443:9443"
     volumes:
       - ./portainer_data:/data
       - /var/run/docker.sock:/var/run/docker.sock
