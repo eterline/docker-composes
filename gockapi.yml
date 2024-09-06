@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  gokapi:
+    image: 'docker.io/f0rc3/gokapi:latest'
+    container_name: gokapi
+    hostname: gokapi
+    restart: unless-stopped
+    ports:
+      - '54000:53842'
+    volumes:
+      - ./gokapi-data:/app/dat
+    environment:
+      - TZ=UTC

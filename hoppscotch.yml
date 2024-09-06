@@ -11,3 +11,8 @@ services:
       - '3100:3100'
       - '3170:3170'
     env_file: "hoppscotch.env"
+# Pre install:
+# docker pull hoppscotch/hoppscotch
+# docker run -it --entrypoint sh --env-file hoppscotch.env hoppscotch/hoppscotch
+# On DB grant owner
+# pnpx prisma migrate deploy
